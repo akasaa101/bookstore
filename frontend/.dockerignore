@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+
+# Ignore editor and OS files
+.DS_Store
+*.swp
+Thumbs.db
+
+# Ignore build output
+build
+*.css.map
+*.js.map
+
+# Ignore non-essential files
+package-lock.json
+yarn.lock

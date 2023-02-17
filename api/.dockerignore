@@ -1,0 +1,23 @@
+# Ignore development files
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore editor and OS files
+.DS_Store
+*.swp
+Thumbs.db
+
+# Ignore build output
+dist
+*.js.map
+
+# Ignore test and coverage files
+coverage
+.nyc_output
+
+# Ignore other non-essential files
+README.md
+package-lock.json
+yarn.lock
