@@ -5,12 +5,14 @@ import theme from './theme';
 import { Provider } from 'react-redux'
 import { store } from './store/index'
 import Auth from './pages/Auth';
+import Home from './pages/Home'
 const App  = () => {
 
   return (
     <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <Auth/>
+      {/* <Auth/> */}
+      <Home />
     </ThemeProvider>
     </Provider>
   )

@@ -4,7 +4,7 @@ import theme from '../theme';
 import { AuthForm } from '../components';
 const Auth = () => {
     return (
-        <Box sx={{width: '100%', height: '100vh', bgcolor: theme.palette.primary.main, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Box sx={{width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <AuthForm/>
         </Box>
     )

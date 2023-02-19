@@ -7,7 +7,7 @@ import { PrismaService } from './prisma.service';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthorsController } from './authors/authors.controller';
-import { AuthorsService } from './authors/authors.service';
+import { AuthorsService } from './authors/authors.service'; // <-- add this import
 import { BooksController } from './books/books.controller';
 import { BooksService } from './books/books.service';
 
@@ -31,6 +31,6 @@ import { BooksService } from './books/books.service';
     PrismaService,
     AuthorsService,
     BooksService,
-  ],
+  ], // <-- add AuthorService to providers
 })
 export class AppModule {}

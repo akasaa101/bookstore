@@ -8,6 +8,9 @@ services:
   api:
     build:
       context: ./api
+    depends_on: 
+      - postgres
+      - redis
     environment:
       DATABASE_URL: postgres://postgres:password@postgres:5432/bookstore
       REDIS_URL: redis://redis:6379
@@ -19,9 +22,15 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: postgres
       POSTGRES_DB: bookstore
+      PGDATA: /data/postgres
     ports:
       - "5432:5432"
+    volumes:
+       - postgres-db:/data/postgres
   redis:
       image: redis:latest
       ports:
         - "6379:6379"
+volumes:
+  postgres-db:
+    driver: local
