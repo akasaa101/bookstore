@@ -7,7 +7,9 @@ import { PrismaService } from './prisma.service';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthorsController } from './authors/authors.controller';
-import { AuthorsService } from './authors/authors.service'; // <-- add this import
+import { AuthorsService } from './authors/authors.service';
+import { BooksController } from './books/books.controller';
+import { BooksService } from './books/books.service';
 
 @Module({
   imports: [
@@ -17,7 +19,18 @@ import { AuthorsService } from './authors/authors.service'; // <-- add this impo
       signOptions: { expiresIn: '1h' },
     }),
   ],
-  controllers: [AppController, UserController, AuthorsController],
-  providers: [AppService, UserService, PrismaService, AuthorsService], // <-- add AuthorService to providers
+  controllers: [
+    AppController,
+    UserController,
+    AuthorsController,
+    BooksController,
+  ],
+  providers: [
+    AppService,
+    UserService,
+    PrismaService,
+    AuthorsService,
+    BooksService,
+  ],
 })
 export class AppModule {}
