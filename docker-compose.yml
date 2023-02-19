@@ -25,12 +25,3 @@ services:
       image: redis:latest
       ports:
         - "6379:6379"
-  bullmq:
-      build:
-        context: ./queue
-      environment:
-        REDIS_URL: redis://redis:6379
-        QUEUES: "bookstore"
-      depends_on:
-        - redis
-      command: sh -c "sleep 10 && node src/worker.js"
