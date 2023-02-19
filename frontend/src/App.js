@@ -1,18 +1,16 @@
-import React from 'react'; // Add this line to import React
+import React from 'react';
 import './App.css';
-import { Box, Typography } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme';
 import { Provider } from 'react-redux'
 import { store } from './store/index'
-
+import Auth from './pages/Auth';
 const App  = () => {
+
   return (
     <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <Box>
-        <Typography>Hello </Typography>
-      </Box>
+      <Auth/>
     </ThemeProvider>
     </Provider>
   )
